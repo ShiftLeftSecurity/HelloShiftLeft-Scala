@@ -1,0 +1,20 @@
+@import helper._;
+
+<html>
+    <head>
+        <script src="assets/javascripts/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="input">
+                <form action="/customers" method="POST">
+                    @CSRF.formField
+                    Name: <input type="text" name="firstName"/> <br />
+                    SSN:  <input type="text" name="ssn"/>
+                <button type="submit" >Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
